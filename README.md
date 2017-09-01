@@ -42,6 +42,8 @@ for cert in c.search("github.com and valid_nss: true", fields=fields):
 # aggregate report on key types used by trusted certificates
 print c.report(query="valid_nss: true", field="parsed.subject_key_info.key_algorithm.name")
 
+#paged search
+#print c.paged_search("80.http.get.headers.server: nginx", page=1)
 ```
 
 CensysIPv4
@@ -71,6 +73,9 @@ fields = ["parsed.subject_dn", "parsed.fingerprint_sha256", "parsed.fingerprint_
 
 for c in CensysWebsites.search("80.http.get.headers.server: nginx"):
 	print c
+
+#paged search
+#print CensysWebsites.paged_search("80.http.get.headers.server: nginx", page=1)
 ```
 
 SQL Query API
