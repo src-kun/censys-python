@@ -56,6 +56,8 @@ fields = ["parsed.subject_dn", "parsed.fingerprint_sha256", "parsed.fingerprint_
 
 for c in ipv4.search("80.http.get.headers.server: nginx"):
 	print c
+#paged search
+#print ipv4.paged_search("80.http.get.headers.server: nginx", page=1)
 ```
 CensysWebsites
 ```
