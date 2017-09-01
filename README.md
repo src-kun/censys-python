@@ -26,7 +26,7 @@ endpoints. There is a Python class for each index: `CensysIPv4`,
 certificates, but the same methods exist for each of the three indices.
 
 CensysCertificates
-----------------------
+-------
 ```python
 import censys.certificates
 
@@ -46,7 +46,7 @@ print c.report(query="valid_nss: true", field="parsed.subject_key_info.key_algor
 ```
 
 CensysIPv4
-----------------------
+-------
 ```
 import censys.ipv4
 
@@ -60,7 +60,7 @@ for c in ipv4.search("80.http.get.headers.server: nginx"):
 	print c
 ```
 CensysWebsites
-----------------------
+-------
 ```
 import censys.websites
 
