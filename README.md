@@ -47,7 +47,7 @@ print c.report(query="valid_nss: true", field="parsed.subject_key_info.key_algor
 ```
 
 CensysIPv4
-```
+```python
 import censys.ipv4
 
 UID = ""
@@ -62,7 +62,7 @@ for c in ipv4.search("80.http.get.headers.server: nginx"):
 #print ipv4.paged_search("80.http.get.headers.server: nginx", page=1)
 ```
 CensysWebsites
-```
+```python
 import censys.websites
 
 UID = ""
